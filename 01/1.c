@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <assert.h>
 
 
@@ -41,7 +42,7 @@ int main(int argc, char** argv) {
                 printf("Summing %d * 10 to %d\nTotal: %d\n", first, last, total);
                 total += (first * 10) + last;
                 printf("Summed total: %d\n", total);
-            } else if (!atoi(c)) {
+            } else if (!isdigit(c)) {
                 printf("Skipping %c\n", *c);
                 continue;
             } else if (!first) {
