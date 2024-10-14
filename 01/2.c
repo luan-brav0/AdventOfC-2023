@@ -42,10 +42,9 @@ int main(int argc, char** argv) {
                 total += (first * 10) + last;
                 printf("Summed total: %d\n", total);
             } else if (!isdigit(c)) {
-                //printf("Skipping %c\n", *c);
+                // verify if also text
                 continue;
             } else if (!first) {
-                // first = atoi(c); // doesn't work for this if c[x] are also a numbers
                 first = *c - '0';
                 printf("set first: char: %c first: %d\n", *c, first);
                 assert(first < 10);
